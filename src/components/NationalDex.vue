@@ -1,10 +1,12 @@
 <script lang="ts">
+import { PokemonData } from '@/http';
 import PokemonCard from './PokemonCard.vue';
 
+
 export default {
-    components: { PokemonCard }, data() {
+    components: { PokemonCard}, data() {
         return {
-            pokebank: ["psyduck, pikachu, ditto"]
+            pokebank: PokemonData()
         }
     },
 }
@@ -15,12 +17,11 @@ export default {
 
 <template>
     
-    <div class="flex">
-        <PokemonCard />
-        <PokemonCard />
-        <PokemonCard />
+    <div v-for="pokemon in pokebank" :key="pokemon.name" class="flex">
+        <PokemonCard :pokemon="pokemon"/>
         
     </div>
+
 </template>
 
 
