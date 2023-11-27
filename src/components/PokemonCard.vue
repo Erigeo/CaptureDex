@@ -11,7 +11,7 @@
             </div>
             <p class="pokeName"> Ditto</p>
             <div class="pokeType-wrapper center normal" id="single-type">
-                <p class="pokeType">normal</p>
+                <span class="pokeType">normal</span>
             </div>
 
         </div>
@@ -24,7 +24,7 @@
 <style scoped>
 .pokeNumber {
     position: absolute;
-    top: 4.4rem;
+    top: 5rem;
     font-size: 0.6em;
 }
 
