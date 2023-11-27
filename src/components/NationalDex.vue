@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 .flex {
-    display: flex;
+    display: inline-flex;
     gap: 3em;
 }
 </style>

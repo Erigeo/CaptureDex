@@ -37,7 +37,7 @@ export default {
 }
 .pokeNumber {
     position: absolute;
-    top: 4.4rem;
+    top: 5rem;
     font-size: 0.6em;
 }
 
