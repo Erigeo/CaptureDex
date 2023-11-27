@@ -21,7 +21,6 @@ export default {
         <PokemonCard :pokemon="pokemon"/>
         
     </div>
-
     </section>
 
 
