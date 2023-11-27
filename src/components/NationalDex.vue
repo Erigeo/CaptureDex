@@ -16,11 +16,14 @@ export default {
 
 
 <template>
-    
-    <div v-for="pokemon in pokebank" :key="pokemon.name" class="flex">
+    <section>
+        <div v-for="pokemon in pokebank" :key="pokemon.name" class="flex">
         <PokemonCard :pokemon="pokemon"/>
         
     </div>
+
+    </section>
+
 
 </template>
 

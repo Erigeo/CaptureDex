@@ -4,27 +4,27 @@ export function PokemonData() {
             "name" : "Ditto",
             "image" : "ditto.png",
             "number" : "#0132",
-            "Type" : ["Normal"],
-            "Captured" : false,
-            "Game" : ["Fire red"]
+            "type" : ["Normal"],
+            "captured" : false,
+            "game" : ["Fire red"]
 
         },
         {
             "name" : "Bulbasaur",
             "image" : "bulbasaur.png",
             "number" : "#0001",
-            "Type" : ["Grass", "Poison"],
-            "Captured" : false,
-            "Game" : ["Fire red"]
+            "type" : ["Grass", "Poison"],
+            "captured" : false,
+            "game" : ["Fire red"]
 
         },
         {
             "name" : "shroomish",
             "image" : "shroomish.png",
             "number" : "#0285",
-            "Type" : ["Grass"],
-            "Captured" : false,
-            "Game" : ["Emerald"]
+            "type" : ["Grass"],
+            "captured" : true,
+            "game" : ["Emerald"]
 
         },
 
