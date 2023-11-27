@@ -10,11 +10,11 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.2",
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@popperjs/core": "^2.11.8",
     "@tsconfig/node18": "^18.2.2",
     "@types/bootstrap": "^5.2.10",
     "@types/node": "^18.18.5",
