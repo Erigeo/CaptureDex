@@ -2,7 +2,7 @@ export function PokemonData() {
     return [
         {
             "name" : "Ditto",
-            "image": "ditto.png",
+            "image" : "ditto.png",
             "number" : "#0132",
             "Type" : ["Normal"],
             "Captured" : false,
@@ -11,7 +11,7 @@ export function PokemonData() {
         },
         {
             "name" : "Bulbasaur",
-            "image": "ditto1.png",
+            "image" : "bulbasaur.png",
             "number" : "#0001",
             "Type" : ["Grass", "Poison"],
             "Captured" : false,
@@ -20,7 +20,7 @@ export function PokemonData() {
         },
         {
             "name" : "shroomish",
-            "image": "shroomish.png",
+            "image" : "shroomish.png",
             "number" : "#0285",
             "Type" : ["Grass"],
             "Captured" : false,

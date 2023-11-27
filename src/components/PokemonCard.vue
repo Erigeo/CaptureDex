@@ -14,7 +14,7 @@ export default {
 
         <div>
             <div class="pokeCard center">
-                <img :src="`../assets/imagens/${pokemon.image}`" alt="">
+                <img :src="`/imagens/${pokemon.image}`" alt="">
                 <p class="pokeNumber"> {{ pokemon.number}}</p>
 
             </div>
@@ -22,7 +22,6 @@ export default {
             <div class="pokeType-wrapper center normal" id="single-type">
                 <p class="pokeType"> {{ pokemon.type }}</p> 
             </div>
-
         </div>
 
         
@@ -91,6 +90,7 @@ article {
 
 .normal {
     background-color: #A8A77A;
+    font-style: blue;
 }
 
 #single-type {
