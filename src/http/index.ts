@@ -27,7 +27,42 @@ export function PokemonData() {
             "game" : ["Emerald"]
 
         },
+        {
+            "name" : "shroomish",
+            "image" : "shroomish.png",
+            "number" : "#0285",
+            "type" : ["Grass"],
+            "captured" : true,
+            "game" : ["Emerald"]
 
+        },
+        {
+            "name" : "shroomish",
+            "image" : "shroomish.png",
+            "number" : "#0285",
+            "type" : ["Grass"],
+            "captured" : true,
+            "game" : ["Emerald"]
+
+        },
+        {
+            "name" : "shroomish",
+            "image" : "shroomish.png",
+            "number" : "#0285",
+            "type" : ["Grass"],
+            "captured" : true,
+            "game" : ["Emerald"]
+
+        },
+        {
+            "name" : "shroomish",
+            "image" : "shroomish.png",
+            "number" : "#0285",
+            "type" : ["Grass"],
+            "captured" : true,
+            "game" : ["Emerald"]
+
+        },
     ]
 
 }

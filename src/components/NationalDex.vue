@@ -4,7 +4,7 @@ import PokemonCard from './PokemonCard.vue';
 
 
 export default {
-    components: { PokemonCard}, data() {
+    components: { PokemonCard }, data() {
         return {
             pokebank: PokemonData()
         }
@@ -16,21 +16,23 @@ export default {
 
 
 <template>
-    <section>
-        <div v-for="pokemon in pokebank" :key="pokemon.name" class="flex">
-        <PokemonCard :pokemon="pokemon"/>
-        
-    </div>
+    <h2 class="text-center mt-5">Pokedex</h2>
+    <section class="d-flex align-items-center justify-content-center mt-5">
+            <div class="card-list-pokemon">
+                <div class="" v-for="pokemon in pokebank" :key="pokemon.name">
+                    <PokemonCard class="mb-2" :pokemon="pokemon" />
+                </div>
+            </div>
     </section>
-
-
 </template>
 
 
 <style scoped>
-.flex {
-    display: inline-flex;
-    gap: 3em;
+.card-list-pokemon {
+    display: grid;
+    grid-template-columns: repeat(6, 5fr);
+    gap: 2em;
 }
+
 </style>
 
