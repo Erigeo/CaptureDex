@@ -13,21 +13,21 @@ export default {
     <article class="center">
 
         
-        <div>
-            <img v-if="pokemon.captured" src="/imagens/Poke_Ball_Sprite 1.png" alt="" class="Captured">
-        
+        <div class="card-wrapper">
+            <img v-if="pokemon.captured" src="/imagens/Poke_Ball_Sprite 1.png" alt="" class="captured">
+            <img v-else src="" />
             <div class="pokeCard center">
                 <img :src="`/imagens/${pokemon.image}`" alt="">
                 <p class="pokeNumber"> {{ pokemon.number}}</p>
 
             </div>
             <p class="pokeName"> {{ pokemon.name }}</p>
-            <div v-if="pokemon.type && pokemon.type.length > 1" id="double-type" > 
-                <p class="pokeType pokeType-wrapper center normal" id="double-type"> {{ pokemon.type[0] }} </p> 
-                <p class="pokeType pokeType-wrapper center normal"> {{ pokemon.type[1] }} </p> 
+            <div v-if="pokemon.type && pokemon.type.length > 1" > 
+                <span class=" pokeType-wrapper center normal" id="double-type"> {{ pokemon.type[0] }} </span> 
+                <span class=" pokeType-wrapper center normal" id="double-type"> {{ pokemon.type[1] }} </span> 
             </div>
-            <div v-else class="pokeType-wrapper center normal" id="single-type" > 
-                <p class="pokeType"> {{ pokemon.type[0] }} </p> 
+            <div v-else  > 
+                <span class="pokeType-wrapper center normal" id="single-type"> {{ pokemon.type[0] }} </span> 
             </div>
             
         </div>
@@ -37,7 +37,11 @@ export default {
     
 <style scoped>
 
-.Captured {
+.card-wrapper{
+    position: relative;
+}
+
+.captured {
     position: relative;
     top: 0.3rem;
     left: 6.5rem;
@@ -104,6 +108,7 @@ article {
 
     width: 3.6rem;
     height: 0.9rem;
+
 }
 
 .normal {

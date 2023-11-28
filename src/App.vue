@@ -2,9 +2,8 @@
 import Banner from './components/Banner.vue'
 import NationalDex from './components/NationalDex.vue';
 
-
 export default {
-    components: { Banner, NationalDex}
+  components: { Banner, NationalDex }
 }
 </script>
 
@@ -12,6 +11,17 @@ export default {
 
 
 <template>
-  <Banner/>
-  <NationalDex/>
+  <Banner />
+  <NationalDex />
 </template>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: mediumaquamarine;
+
+}
+</style>
