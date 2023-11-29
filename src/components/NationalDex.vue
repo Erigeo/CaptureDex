@@ -39,9 +39,6 @@ export default {
         selectGame(game: { id: number; label: string; }) {
             this.selectedGame = game.label;
         },
-        getPokemonKey(pokemon: { name: any; }) {
-            return `${pokemon.name}_${this.capturedKey}`;
-        },
     },
 }
 
