@@ -6,7 +6,7 @@ export function PokemonData() {
             "number" : "#0132",
             "type" : ["Normal"],
             "captured" : false,
-            "game" : ["Fire red"]
+            "game" : ["Fire Red"]
 
         },
         {
@@ -15,7 +15,7 @@ export function PokemonData() {
             "number" : "#0001",
             "type" : ["Grass", "Poison"],
             "captured" : false,
-            "game" : ["Fire red"]
+            "game" : ["Fire Red"]
 
         },
         {
@@ -32,7 +32,7 @@ export function PokemonData() {
             "image" : "shroomish.png",
             "number" : "#0285",
             "type" : ["Grass"],
-            "captured" : true,
+            "captured" : false,
             "game" : ["Emerald"]
 
         },

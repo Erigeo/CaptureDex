@@ -3,8 +3,13 @@ import type { PropType } from 'vue';
 import type IPokemonData from '@/interface/IPokemonData'
 
 export default {
-    props : {
-        pokemon: { type: Object as PropType<IPokemonData>, required: true}
+    props: {
+        pokemon: { type: Object as PropType<IPokemonData>, required: true }
+    },
+    methods: {
+        toggleCaptured() {
+            this.pokemon.captured = !this.pokemon.captured;
+        }
     }
 }
 </script>
@@ -12,32 +17,31 @@ export default {
 <template>
     <article class="center">
 
-        
+
         <div class="card-wrapper">
-            <img v-if="pokemon.captured" src="/imagens/Poke_Ball_Sprite 1.png" alt="" class="captured">
-            <img v-else src="" />
+            <img v-on:click="toggleCaptured" v-if="pokemon.captured" src="/imagens/pokeball.png" alt="" class="captured">
+            <img v-else v-on:click="toggleCaptured" src="/imagens/pokeball_gray.png" alt="" class="captured" />
             <div class="pokeCard center">
                 <img :src="`/imagens/${pokemon.image}`" alt="">
-                <p class="pokeNumber"> {{ pokemon.number}}</p>
+                <p class="pokeNumber"> {{ pokemon.number }}</p>
 
             </div>
             <p class="pokeName"> {{ pokemon.name }}</p>
-            <div v-if="pokemon.type && pokemon.type.length > 1" > 
-                <span class=" pokeType-wrapper center normal" id="double-type"> {{ pokemon.type[0] }} </span> 
-                <span class=" pokeType-wrapper center normal" id="double-type"> {{ pokemon.type[1] }} </span> 
+            <div v-if="pokemon.type && pokemon.type.length > 1">
+                <span class=" pokeType-wrapper center normal" id="double-type"> {{ pokemon.type[0] }} </span>
+                <span class=" pokeType-wrapper center normal" id="double-type"> {{ pokemon.type[1] }} </span>
             </div>
-            <div v-else  > 
-                <span class="pokeType-wrapper center normal" id="single-type"> {{ pokemon.type[0] }} </span> 
+            <div v-else>
+                <span class="pokeType-wrapper center normal" id="single-type"> {{ pokemon.type[0] }} </span>
             </div>
-            
+
         </div>
     </article>
 </template>
 
     
 <style scoped>
-
-.card-wrapper{
+.card-wrapper {
     position: relative;
 }
 
@@ -49,7 +53,7 @@ export default {
 
 #double-type {
     margin-right: 0.2rem;
-   
+
 }
 
 .imagem {
@@ -57,6 +61,7 @@ export default {
     position: absolute;
     margin-top: 10rem;
 }
+
 .pokeNumber {
     position: absolute;
     top: 5rem;
