@@ -19,7 +19,7 @@ export function PokemonData() {
 
         },
         {
-            "name" : "shroomish",
+            "name" : "Shroomish",
             "image" : "shroomish.png",
             "number" : "#0285",
             "type" : ["Grass"],
@@ -28,7 +28,7 @@ export function PokemonData() {
 
         },
         {
-            "name" : "shroomish",
+            "name" : "Shroomish",
             "image" : "shroomish.png",
             "number" : "#0285",
             "type" : ["Grass"],
@@ -37,7 +37,7 @@ export function PokemonData() {
 
         },
         {
-            "name" : "shroomish",
+            "name" : "Shroomish",
             "image" : "shroomish.png",
             "number" : "#0285",
             "type" : ["Grass"],
@@ -46,7 +46,7 @@ export function PokemonData() {
 
         },
         {
-            "name" : "shroomish",
+            "name" : "Shroomish",
             "image" : "shroomish.png",
             "number" : "#0285",
             "type" : ["Grass"],
@@ -55,7 +55,7 @@ export function PokemonData() {
 
         },
         {
-            "name" : "shroomish",
+            "name" : "Shroomish",
             "image" : "shroomish.png",
             "number" : "#0285",
             "type" : ["Grass"],

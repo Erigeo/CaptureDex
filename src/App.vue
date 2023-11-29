@@ -21,7 +21,8 @@ export default {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: mediumaquamarine;
+  background-color: rgb(158, 199, 191);
 
 }
+
 </style>

@@ -28,11 +28,11 @@ export default {
             </div>
             <p class="pokeName"> {{ pokemon.name }}</p>
             <div v-if="pokemon.type && pokemon.type.length > 1">
-                <span class=" pokeType-wrapper center normal" id="double-type"> {{ pokemon.type[0] }} </span>
-                <span class=" pokeType-wrapper center normal" id="double-type"> {{ pokemon.type[1] }} </span>
+                <span :class="pokemon.type[0].toLowerCase()" class=" pokeType-wrapper center" id="double-type"> {{ pokemon.type[0] }} </span>
+                <span :class="pokemon.type[1].toLowerCase()" class=" pokeType-wrapper center" id="double-type"> {{ pokemon.type[1] }} </span>
             </div>
             <div v-else>
-                <span class="pokeType-wrapper center normal" id="single-type"> {{ pokemon.type[0] }} </span>
+                <span :class="pokemon.type[0].toLowerCase()" class="pokeType-wrapper center" id="single-type"> {{ pokemon.type[0] }} </span>
             </div>
 
         </div>
@@ -92,9 +92,6 @@ article {
     position: relative;
 }
 
-
-
-
 .pokeName {
     color: black;
     text-align: center;
@@ -104,23 +101,28 @@ article {
 .pokeType-wrapper {
     display: inline-flex;
     text-align: center;
-    font-size: 0.6875rem;
-
-    border-radius: 0.3rem;
-
+    font-size: 0.9rem;
     min-width: 3.6rem;
     min-height: 0.875rem;
-
     width: 3.6rem;
-    height: 0.9rem;
-
+    color: white;
+    border-radius: 2em;
 }
 
 .normal {
     background-color: #A8A77A;
 }
 
+.grass {
+    background: #7AC74C;
+}
+
+.poison {
+    background-color: #A33EA1;
+}
+
+
 #single-type {
-    margin-left: 1.8em;
+    margin-left: 1.5em;
 }
 </style>

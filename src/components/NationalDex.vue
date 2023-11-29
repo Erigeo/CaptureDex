@@ -50,8 +50,9 @@ export default {
 
 
 <template>
-    <h2 class="text-center mt-5">Pokedex</h2>
-    <div class="d-flex justify-content-center toggles mt-5 container-fluid">
+    <h2 class="text-center mt-5">Pokédex</h2>
+    <section id="background">
+    <div class="d-flex justify-content-center toggles mt-5 container-fluid" >
         <div class="row">
             <div class="form-check form-switch form-check-inline col-3">
                 <input v-model="showCaptured" class="form-check-input" type="checkbox" role="switch"
@@ -93,14 +94,15 @@ export default {
 
             </div>
         </div>
-
     </div>
+
     <section class="d-flex align-items-center justify-content-center mt-5">
         <div class="card-list-pokemon">
             <div class="" v-for="pokemon in filteredPokemon" :key="pokemon.name">
                 <PokemonCard class="mb-2" :pokemon="pokemon" />
             </div>
         </div>
+    </section>
     </section>
 </template>
 
@@ -124,6 +126,9 @@ export default {
     position: absolute;
 }
 
-.input-group-text {}
+
+
+
+
 </style>
 
