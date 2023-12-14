@@ -1,7 +1,7 @@
 
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-custom navbar-expand-lg">
     <div class="container-fluid">
       <span class="navbar-brand mb-0 h1">CaptureDex</span>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -30,4 +30,8 @@
 
 
 
-<style scoped></style>
+<style scoped>
+.navbar-custom {
+  background-color: #D2A0A1;
+}
+</style>

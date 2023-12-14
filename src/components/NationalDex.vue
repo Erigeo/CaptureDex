@@ -16,7 +16,8 @@ export default {
                 { id: 3, label: "Fire Red" },
             ],
             capturedKey: 0,
-            search: ""
+            search: "",
+            localStorageKey: 'pokemonApp', 
         }
     },
     computed: {
@@ -32,13 +33,50 @@ export default {
             deep: true,
             handler() {
                 this.capturedKey += 1;
+                localStorage.setItem('pokebank', JSON.stringify(this.pokebank));
             },
         },
+        'showCaptured': 'saveFiltersState',
+        'showNonCaptured': 'saveFiltersState',
+        'selectedGame': 'saveFiltersState',
+        'search': 'saveFiltersState',
     },
     methods: {
         selectGame(game: { id: number; label: string; }) {
             this.selectedGame = game.label;
         },
+        saveFiltersState() {
+            const filtersState = {
+                showCaptured: this.showCaptured,
+                showNonCaptured: this.showNonCaptured,
+                selectedGame: this.selectedGame,
+                search: this.search,
+            };
+
+            localStorage.setItem(this.localStorageKey, JSON.stringify(filtersState));
+        },
+
+        loadFiltersState() {
+            const storedFiltersState = localStorage.getItem(this.localStorageKey);
+
+            if (storedFiltersState) {
+                const filtersState = JSON.parse(storedFiltersState);
+
+                this.showCaptured = filtersState.showCaptured;
+                this.showNonCaptured = filtersState.showNonCaptured;
+                this.selectedGame = filtersState.selectedGame;
+                this.search = filtersState.search;
+            }
+        },
+    },
+    mounted() {
+        const storedPokebank = localStorage.getItem('pokebank');
+
+        if (storedPokebank) {
+            this.pokebank = JSON.parse(storedPokebank);
+        }
+        this.loadFiltersState();
+
     },
 }
 
