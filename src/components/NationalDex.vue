@@ -9,9 +9,9 @@ export default {
             pokebank: PokemonData(),
             showCaptured: false,
             showNonCaptured: true,
-            selectedGame: "Todos os jogos",
+            selectedGame: "All games",
             games: [
-                { id: 1, label: "Todos os jogos" },
+                { id: 1, label: "All games" },
                 { id: 2, label: "Emerald" },
                 { id: 3, label: "Fire Red" },
             ],
@@ -22,7 +22,7 @@ export default {
     computed: {
         filteredPokemon() {
             return this.pokebank.filter(pokemon =>
-                (pokemon.game.indexOf(this.selectedGame) !== -1 || this.selectedGame == "Todos os jogos") && ((pokemon.captured && this.showCaptured) || (!pokemon.captured && this.showNonCaptured)) &&
+                (pokemon.game.indexOf(this.selectedGame) !== -1 || this.selectedGame == "All games") && ((pokemon.captured && this.showCaptured) || (!pokemon.captured && this.showNonCaptured)) &&
                 (pokemon.name.toLowerCase().indexOf(this.search.toLowerCase()) != -1)
             );
         },
@@ -54,12 +54,12 @@ export default {
             <div class="form-check form-switch form-check-inline col-3">
                 <input v-model="showCaptured" class="form-check-input" type="checkbox" role="switch"
                     id="flexSwitchCheckDefault">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Exibir pokémons capturados</label>
+                <label class="form-check-label" for="flexSwitchCheckDefault">Show captured pokémon</label>
             </div>
             <div class="form-check form-switch form-check-inline col-3">
                 <input v-model="showNonCaptured" class="form-check-input" type="checkbox" role="switch"
                     id="flexSwitchCheckChecked" checked>
-                <label class="form-check-label" for="flexSwitchCheckChecked">Exibir pokémons não capturados</label>
+                <label class="form-check-label" for="flexSwitchCheckChecked">Show missing pokémon</label>
             </div>
             <div class="dropdown-center col-2 me-4" id="games">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -77,8 +77,8 @@ export default {
             <div class="d-flex col-2 ms-5" id="search-bar">
                 <form class="d-flex" role="search">
                     <div class="input-group">
-                        <input v-model="search" class="form-control border-0" type="search" placeholder="Pesquisar"
-                            aria-label="Pesquisar">
+                        <input v-model="search" class="form-control border-0" type="search" placeholder="Search"
+                            aria-label="Search">
                         <span class="input-group-text border-0">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-search" viewBox="0 0 16 16">

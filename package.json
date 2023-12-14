@@ -1,5 +1,5 @@
 {
-  "name": "pokeproject",
+  "name": "capturedex",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -10,19 +10,39 @@
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
     "bootstrap": "^5.3.2",
-    "vue": "^3.3.4"
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@popperjs/core": "^2.11.8",
     "@tsconfig/node18": "^18.2.2",
+    "@types/body-parser": "^1.19.5",
     "@types/bootstrap": "^5.2.10",
-    "@types/node": "^18.18.5",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^18.19.3",
     "@vitejs/plugin-vue": "^4.4.0",
     "@vue/tsconfig": "^0.4.0",
     "npm-run-all2": "^6.1.1",
     "typescript": "~5.2.0",
     "vite": "^4.4.11",
     "vue-tsc": "^1.8.19"
-  }
+  },
+  "description": "This template should help get you started developing with Vue 3 in Vite.",
+  "main": "src/server.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erigeo/CaptureDex.git"
+  },
+  "author": "Georg H. M. Nunes, Yves P. C. Rego",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Erigeo/CaptureDex/issues"
+  },
+  "homepage": "https://github.com/Erigeo/CaptureDex#readme"
 }

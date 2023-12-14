@@ -1,9 +1,9 @@
 <script lang="ts">
 import Banner from './components/Banner.vue'
-import NationalDex from './components/NationalDex.vue';
+import NationalDex from './components/NationalDex.vue'
 
 export default {
-  components: { Banner, NationalDex }
+  components: { Banner, NationalDex}
 }
 </script>
 
@@ -12,7 +12,8 @@ export default {
 
 <template>
   <Banner />
-  <NationalDex />
+  <router-view/>
+
 </template>
 
 <style>
