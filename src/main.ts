@@ -10,12 +10,14 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LoginPage from './components/LoginPage.vue'
 import NationalDex from './components/NationalDex.vue'
 import Home from './components/Home.vue'
+import Register from './components/Register.vue'
 
 const routes = [
     { path: '/', name: 'App', component: Home},
     { path: '/pokedex', name: 'Pokedex', component: NationalDex},
     { path: '/login', component: LoginPage},
     { path: '/home', name: 'Home', component: Home},
+    { path: '/register', name: 'Register', component: Register},
   ]
   
   const router = createRouter({

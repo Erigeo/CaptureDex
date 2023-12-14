@@ -6,6 +6,7 @@ export default {
     return {
       username: '',
       password: '',
+      email: '',
     };
   },
   methods: {
@@ -19,6 +20,7 @@ export default {
         body: JSON.stringify({
           username: this.username,
           password: this.password,
+          email: this.email,
         }),
       })
       .then(response => response.json())
@@ -39,31 +41,29 @@ export default {
     <div id="app">
       <form @submit.prevent="submitForm">
         
-        <span class="spanlogin container">Login</span>
-        <input type="text" v-model="username" placeholder="Username" required>
         
+        <input type="text" v-model="email" placeholder="Email" required>
+        <input type="text" v-model="username" placeholder="Username" required>
         <input type="password" v-model="password" placeholder="Password" required>
-        <div class="forgot-password">
-    <a href="#">Forgot your password?</a>
-  </div>
+       
         <div class="container">
-          <button type="submit" class="btn btn-primary btn-block buttonblue">Sign in
-          </button>
+          <button type="submit" class="btn btn-primary btn-block buttonblue">Register</button>
         </div>
         
       </form>
     </div>
 
-  
-    <div class="maxsize">
-      <h1>New here?</h1>
-      <h2>Sign up now and synchronize your <br> captured pokemons in all your dispositives.</h2>
-      <div class=" buttonregister">
-      <router-link to="/Register" class="btn btn-primary btn-block buttonblue" type="button">Sign up</router-link>
-  </div>
-    </div>
 
-    
+    <div class="maxsize">
+     
+      <span>
+          Create an account now and synchronize your captured pokemons in all your dispositives.
+      </span>
+
+    </div>
+    <div class="containerimg">
+        <img src="/imagens/eevee.png" alt="">
+      </div>
   </template>
   
 
@@ -80,51 +80,33 @@ img {
   width: 150px;
 }
 
-.buttonblue {
-  width: 175px;
-}
-
-.buttonregister {
-  padding-top: 20px;
-}
-
-.forgot-password {
-margin-top: -10px;
-margin-left: 5px;
-display: flex;
-padding-bottom: 10px;
-
-}
 .maxsize{
   display: flex;
-  margin-left: 700px;
+  margin-left: 750px;
   height: 100px;
-  margin-top: 180px;
-  flex-direction: column;
-  align-items: center;
-
+  margin-top: 115px;
 
 }
 
-.spanlogin {
+span {
   font-family: 'Outfit', sans-serif;
-  font-size: 32px;
-  margin-bottom: 20px;
-  display: flex;
-  margin-top: -30px;
-}
-h1 {
-  font-family: 'Outfit', sans-serif;
-  font-size: 55px;
-  max-width: 600px;
+  font-size: 42px;  
+  max-width: 625px;
   text-align: center;
+  letter-spacing: -1.8px;
+  word-spacing: -0.6px;
+
+  
+
+
 }
 
-h2 {
-  text-align: center ;
-max-width: 650px;
-
-}
+  button {
+    width: 125px;
+    border-radius: 30px;
+    border: none;
+    
+  }
 
   .container {
   display: flex;
@@ -133,12 +115,10 @@ max-width: 650px;
   
 }
 
-
-
 #app {
   color: #1a2938;
   margin-left: 200px;
-  margin-top: 150px;
+  margin-top: 110px;
   background-color: rgb(246, 141, 141);
   width: 400px;
   height: 300px;
