@@ -7,13 +7,9 @@ export default {
 }
 </script>
 
-
-
-
 <template>
   <Banner />
   <router-view/>
-
 </template>
 
 <style>

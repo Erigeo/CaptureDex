@@ -1,36 +1,27 @@
 
 <script lang="ts">
-
+import axios from 'axios';
+//<button v-if="userAuthed" @click="logout">Logout</button>
 export default {
   data() {
     return {
-      username: '',
-      password: '',
+      formData: {
+        username: '',
+        password: '',
+      },
     };
   },
   methods: {
     submitForm() {
-      // Enviar dados para o backend usando o método POST
-      fetch(')', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          username: this.username,
-          password: this.password,
-        }),
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data.message);
-        // Lógica adicional após o envio bem-sucedido
-      })
-      .catch(error => {
-        console.error('Erro ao enviar dados:', error);
-      });
+      axios.post('http://localhost:3000/api/capturedex/LoginUser', this.formData)
+        .then(response => {
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.error(error);
+        });
     },
-  },
+}
 };
 </script>
 
@@ -40,9 +31,9 @@ export default {
       <form @submit.prevent="submitForm">
         
         <span class="spanlogin container">Login</span>
-        <input type="text" v-model="username" placeholder="Username" required>
+        <input type="text" v-model="formData.username" placeholder="Username" required>
         
-        <input type="password" v-model="password" placeholder="Password" required>
+        <input type="password" v-model="formData.password" placeholder="Password" required>
         <div class="forgot-password">
     <a href="#">Forgot your password?</a>
   </div>
