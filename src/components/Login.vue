@@ -1,50 +1,42 @@
 
 <script lang="ts">
-
+import axios from 'axios';
+//<button v-if="userAuthed" @click="logout">Logout</button>
 export default {
   data() {
     return {
-      username: '',
-      password: '',
+      formData: {
+        user: '',
+        password: '',
+      },
     };
   },
   methods: {
-    submitForm() {
-      // Enviar dados para o backend usando o método POST
-      fetch(')', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          username: this.username,
-          password: this.password,
-        }),
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log(data.message);
-        // Lógica adicional após o envio bem-sucedido
-      })
-      .catch(error => {
-        console.error('Erro ao enviar dados:', error);
-      });
+    loginUsuario() {
+      axios.post('http://localhost:3000/api/capturedex/LoginUser', this.formData)
+        .then(response => {
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.error(error);
+        });
     },
-  },
+}
 };
 </script>
 
 
 <template>
     <div id="app">
-      <form @submit.prevent="submitForm">
+      <form @submit.prevent="loginUsuario">
         <label for="username">Nome de usuário:</label>
-        <input type="text" v-model="username" required>
+        <input v-model="formData.user" type="text" id="username" required>
         
         <label for="password">Senha:</label>
-        <input type="password" v-model="password" required>
+        <input v-model="formData.password" type="password" id="password" required>
         
         <button type="submit">Login</button>
+
       </form>
     </div>
   </template>
