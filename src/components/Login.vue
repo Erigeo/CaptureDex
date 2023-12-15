@@ -49,8 +49,8 @@ export default {
     <div class="maxsize">
       <h1>New here?</h1>
       <h2>Sign up now and synchronize your <br> captured pokemons in all your dispositives.</h2>
-      <div class=" buttonregister">
-      <router-link to="/Register" class="btn btn-primary btn-block buttonblue" type="button">Sign up</router-link>
+      <div class="buttonregister">
+      <router-link to="/SignUp" class="btn btn-primary btn-block buttonblue" type="button">Sign up</router-link>
   </div>
     </div>
 
