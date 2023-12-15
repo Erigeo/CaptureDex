@@ -30,16 +30,16 @@ export default {
     <div id="app">
       <form @submit.prevent="sendData">
         
-        <label for="username">Nome de usuário:</label>
+        <label for="username">Username:</label>
         
         <input v-model="formData.user" type="text" required>
         
-        <label for="password">Senha:</label>
+        <label for="password">Password:</label>
         <input v-model="formData.password" type="password" required>
        
         
         <div class="container">
-          <button type="submit">Cadastrar-se</button>
+          <button type="submit">Sign Up</button>
         </div>
         
       </form>
