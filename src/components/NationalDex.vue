@@ -23,7 +23,7 @@ export default {
     computed: {
         filteredPokemon() {
             return this.pokebank.filter(pokemon =>
-                (pokemon.game.indexOf(this.selectedGame) !== -1 || this.selectedGame == "All games") && ((pokemon.captured && this.showCaptured) || (!pokemon.captured && this.showNonCaptured)) &&
+                (pokemon.Games?.includes(this.selectedGame.toLowerCase()) || this.selectedGame == "All games") && ((pokemon.captured && this.showCaptured) || (!pokemon.captured && this.showNonCaptured)) &&
                 (pokemon.name.toLowerCase().indexOf(this.search.toLowerCase()) != -1)
             );
         },
@@ -133,7 +133,7 @@ export default {
 
     <section class="d-flex align-items-center justify-content-center mt-5">
         <div class="card-list-pokemon">
-            <div class="" v-for="pokemon in filteredPokemon" :key="pokemon.name">
+            <div class="" v-for="pokemon in filteredPokemon" :key="pokemon.id">
                 <PokemonCard class="mb-2" :pokemon="pokemon" />
             </div>
         </div>

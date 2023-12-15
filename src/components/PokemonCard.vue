@@ -22,17 +22,17 @@ export default {
             <img v-on:click="toggleCaptured" v-if="pokemon.captured" src="/imagens/pokeball.png" alt="" class="captured">
             <img v-else v-on:click="toggleCaptured" src="/imagens/pokeball_gray.png" alt="" class="captured" />
             <div class="pokeCard center">
-                <img :src="`/imagens/${pokemon.image}`" alt="">
-                <p class="pokeNumber"> {{ pokemon.number }}</p>
+                <img :src="`${pokemon.image}`" alt="">
+                <p class="pokeNumber"> {{ pokemon.id }}</p>
 
             </div>
             <p class="pokeName"> {{ pokemon.name }}</p>
-            <div v-if="pokemon.type && pokemon.type.length > 1">
-                <span :class="pokemon.type[0].toLowerCase()" class=" pokeType-wrapper center" id="double-type"> {{ pokemon.type[0] }} </span>
-                <span :class="pokemon.type[1].toLowerCase()" class=" pokeType-wrapper center" id="double-type"> {{ pokemon.type[1] }} </span>
+            <div v-if="pokemon.types && pokemon.types.length > 1">
+                <span :class="pokemon.types[0].toLowerCase()" class=" pokeType-wrapper center" id="double-type"> {{ pokemon.types[0] }} </span>
+                <span :class="pokemon.types[1].toLowerCase()" class=" pokeType-wrapper center" id="double-type"> {{ pokemon.types[1] }} </span>
             </div>
             <div v-else>
-                <span :class="pokemon.type[0].toLowerCase()" class="pokeType-wrapper center" id="single-type"> {{ pokemon.type[0] }} </span>
+                <span :class="pokemon.types[0].toLowerCase()" class="pokeType-wrapper center" id="single-type"> {{ pokemon.types[0] }} </span>
             </div>
 
         </div>

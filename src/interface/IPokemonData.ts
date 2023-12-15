@@ -1,10 +1,15 @@
 export default interface IPokemonData {
+    _id: {
+        $oid: string;
+    };
+    id: number;
     name: string;
+    types: string[];
     image: string;
-    number: string;
-    type: string[];
+    location: {
+        locations: string;
+        versions: string[];
+    }[];
+    Games: string[];
     captured: boolean;
-    game: string[];
-
-
 }
